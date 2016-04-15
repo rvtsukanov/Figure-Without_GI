@@ -1,24 +1,21 @@
-﻿Построение начато 15.04.2016 17:27:36.
-     1>Проект "c:\Users\Students\documents\visual studio 2012\Projects\App1\App1\App1.vcxproj" в узле 2 (целевые объекты Build).
+﻿Построение начато 15.04.2016 18:21:47.
+     1>Проект "C:\Users\Students\Desktop\App1\App1\App1.vcxproj" в узле 2 (целевые объекты Build).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\App1.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ChildView.cpp
          ChildView.cpp
-     1>c:\users\students\documents\visual studio 2012\projects\app1\app1\childview.cpp(51): warning C4101: A3: неиспользованная локальная переменная
-     1>c:\users\students\documents\visual studio 2012\projects\app1\app1\childview.cpp(50): warning C4101: x_c: неиспользованная локальная переменная
-     1>c:\users\students\documents\visual studio 2012\projects\app1\app1\childview.cpp(51): warning C4101: A1: неиспользованная локальная переменная
-     1>c:\users\students\documents\visual studio 2012\projects\app1\app1\childview.cpp(51): warning C4101: A2: неиспользованная локальная переменная
-     1>c:\users\students\documents\visual studio 2012\projects\app1\app1\childview.cpp(50): warning C4101: y_c: неиспользованная локальная переменная
-       ResourceCompile:
-         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /D _DEBUG /D _AFXDLL /l"0x0419" /IDebug\ /nologo /fo"Debug\App1.res" App1.rc 
+     1>c:\users\students\desktop\app1\app1\childview.cpp(57): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+     1>c:\users\students\desktop\app1\app1\childview.cpp(58): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+     1>c:\users\students\desktop\app1\app1\childview.cpp(59): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\students\documents\visual studio 2012\Projects\App1\Debug\App1.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"c:\users\students\documents\visual studio 2012\Projects\App1\Debug\App1.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\students\documents\visual studio 2012\Projects\App1\Debug\App1.lib" /MACHINE:X86 Debug\App1.res
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Students\Desktop\App1\Debug\App1.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"C:\Users\Students\Desktop\App1\Debug\App1.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Students\Desktop\App1\Debug\App1.lib" /MACHINE:X86 Debug\App1.res
          Debug\App1.obj
          Debug\ChildView.obj
          Debug\MainFrm.obj
+         Debug\My2DObjectB10.obj
          Debug\stdafx.obj
-         App1.vcxproj -> c:\users\students\documents\visual studio 2012\Projects\App1\Debug\App1.exe
-     1>Построение проекта "c:\Users\Students\documents\visual studio 2012\Projects\App1\App1\App1.vcxproj" завершено (целевые объекты Build).
+         App1.vcxproj -> C:\Users\Students\Desktop\App1\Debug\App1.exe
+     1>Построение проекта "C:\Users\Students\Desktop\App1\App1\App1.vcxproj" завершено (целевые объекты Build).
 
 Построение успешно завершено.
 
-Затраченное время: 00:00:01.89
+Затраченное время: 00:00:01.29

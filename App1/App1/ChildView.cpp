@@ -5,6 +5,9 @@
 #include "stdafx.h"
 #include "App1.h"
 #include "ChildView.h"
+#include "Header.h"
+
+
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -47,8 +50,33 @@ void CChildView::OnPaint()
 {
 	CPaintDC dc(this); 
 
+
+	CMy2DPoint C(300,300);
+	CMy2DObject f(C, 0, 400, 100, 100, 100);
+
+	dc.LineTo(C.m_x, C.m_y);
+	dc.LineTo(f.an_point[0].m_x, f.an_point[0].m_y);
+	dc.MoveTo(f.an_point[1].m_x, f.an_point[1].m_y);
+	
+	/*
+
+	dc.MoveTo(f.an_point[0].m_x, f.an_point[0].m_y);
+	for (int i(1); i<=4; i++){
+		dc.LineTo(f.an_point[i].m_x, f.an_point[i].m_y);
+	}
+	dc.AngleArc(f.an_point[4].m_x, f.an_point[4].m_y, f.GetA3(), 180, 90);
+	for (int i(5); i<=9; i++){
+		dc.LineTo(f.an_point[i].m_x, f.an_point[i].m_y);
+	}
+	dc.MoveTo(f.an_point[0].m_x, f.an_point[0].m_y);
+
+
+
+	*/
+
+/*
 	int x_c, y_c;
-	int A(100), A1, A2, A3, kr_x, kr_y;
+	int A, A1, A2, A3, kr_x, kr_y;
 
 
 #define x_c 300
@@ -73,4 +101,5 @@ void CChildView::OnPaint()
 	dc.LineTo(kr_x+A, kr_y+(A-A1)/2);
 	dc.LineTo(kr_x+A, kr_y);
 }
-
+*/
+}
