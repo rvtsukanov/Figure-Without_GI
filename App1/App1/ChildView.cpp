@@ -51,12 +51,12 @@ void CChildView::OnPaint()
 	CPaintDC dc(this); 
 
 
-	CMy2DPoint C(300,300);
-	CMy2DObject f(C, 0, 400, 100, 100, 100);
+	CMy2DPoint C(400,400);
+	CMy2DObject f(C, 0, 300, 16, 38, 14);
 
-	dc.LineTo(C.m_x, C.m_y);
-	dc.LineTo(f.an_point[0].m_x, f.an_point[0].m_y);
-	dc.MoveTo(f.an_point[1].m_x, f.an_point[1].m_y);
+	dc.MoveTo(C.m_x, C.m_y);
+	f.Draw(dc);
+	
 	
 	/*
 

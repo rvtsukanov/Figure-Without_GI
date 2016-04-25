@@ -54,12 +54,17 @@ istream &operator>>(istream &stream, CMy2DPoint &a) {
 
 
 class CMy2DObject {
+private: CMy2DPoint m_center; double m_angle; double A; double A1; double A2; double A3;
+		 CMy2DPoint an_point[10];
+		 double Radius;
+		 double kr_x = 0; 
+		 double kr_y = 0;
+
 public: CMy2DObject(CMy2DPoint c, double an, double AA, double AA1, double AA2, double AA3) :
 	m_center(c), m_angle(an), A(AA), A1(AA1), A2(AA2), A3(AA3) {};
 		CMy2DObject() {};
-		CMy2DPoint an_point[10];
-		double Radius;
-private: CMy2DPoint m_center; double m_angle; double A; double A1; double A2; double A3, kr_x, kr_y;
+		
+
 		 
 public:
 	void SetFig(CMy2DPoint m_c, double angle, double AA, double AA1, double AA2, double AA3) {
@@ -71,15 +76,22 @@ public:
 		 3) Треугольник со стороной А2 не пересекается с окружностью радиуса А3
 		 4) Каждое из значений не больше стороны А исходного квадрата.
 		*/
-		if ((AA1<AA) && (AA - AA1 / 2>0.2*AA3)) {
-			m_center = m_c;
+	//if ((AA1<AA) && (AA - AA1 / 2>0.2*AA3)) 
+		{
+			for (int i(0); i < 10; i++) {
+				an_point[i].m_x = 0;
+				an_point[i].m_y = 0;
+			};
+			m_center.m_x = m_c.m_x;
+			m_center.m_y = m_c.m_y;
 			m_angle = angle;
 			A = AA;
 			A1 = AA1;
 			A2 = AA2;
 			A3 = AA3;
-			kr_x = m_center.m_x - A / 2;
-			kr_y = m_center.m_y - A / 2;
+
+			kr_x = m_center.m_x - (A / 2);
+			kr_y = m_center.m_y - (A / 2);
 
 			an_point[0].m_x = kr_x + A;
 			an_point[0].m_y = kr_y;
@@ -131,17 +143,10 @@ public:
 			};
 
 		}
-		else cout << "Фигура имеет самопересечения. Значения не присвоены." << endl;
+		//else cout << "Фигура имеет самопересечения. Значения не присвоены." << endl;
 	};
 	
-	void GetFig() {
-		cout << "Центр: " << m_center << endl;
-		cout << "Поворот: " << m_angle << endl;
-		cout << "Значение А: " << A << endl;
-		cout << "Значение А1: " << A1 << endl;
-		cout << "Значение А2: " << A2 << endl;
-		cout << "Значение А3: " << A3 << endl;
-	};
+	
 	const double GetA() {
 		return A;
 	};
@@ -193,4 +198,11 @@ public:
 		P.m_y = y; 
 		return IsInside(P);
 	};
+
+
+	void Draw(CDC &dc) {
+		
+			dc.LineTo(an_point[0].m_x, an_point[0].m_y);
+		};
+
 };
